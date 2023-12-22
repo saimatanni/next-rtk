@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodos, removeTodo } from "../redux/todoSlice";
+import MyVRComponent from "../components/MyVRComponent ";
 
 const TodoList = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const TodoList = () => {
 
         <button onClick={handleTodo}>Add todo</button>
       </div>
-      <div className="display-user">
+      {/* <div className="display-user">
         <h3>Todo list</h3>
         {todos?.map((item) => (
           <div key={item.id} className="user-item">
@@ -36,7 +37,8 @@ const TodoList = () => {
             <button onClick={() => handleRemoveTodo(item.id)}>remove</button>
           </div>
         ))}
-      </div>
+      </div> */}
+      <MyVRComponent/>
     </>
   );
 };
